@@ -78,7 +78,7 @@ public class UserService {
                 .secure(false)
                 .path("/")
                 .maxAge(3600)
-                .sameSite("None")
+                .sameSite("Lax")
                 .build();
         response.setHeader(HttpHeaders.SET_COOKIE, cookie.toString());
         return ResponseEntity.ok(token);
